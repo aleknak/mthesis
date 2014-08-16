@@ -12,5 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require foundation
+//= require hamlcoffee
+//= require jquery-fileupload/basic
+//= require underscore-min
+//= require underscore-string
+//= require backbone-min
+
+$(function(){ 
+  Foundation.global.namespace = ''; 
+  $(document).foundation(); 
+});
