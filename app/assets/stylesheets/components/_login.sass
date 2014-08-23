@@ -1,0 +1,172 @@
+body
+  .image-overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #FFF
+    background: transparent url(image_path('overlay.jpg')) no-repeat center
+    background-size: cover
+    z-index: 1
+
+  .auth-box-container
+    font-family: 'Arial', sans-serif
+    overflow: hidden
+    width: 100%
+    height: 100%
+    position: relative
+    z-index: 2
+
+  .auth-box
+    width: 480px
+    background: #F4F4F4
+    background: rgba(220, 220, 220, 0.8)
+    border: 1px solid #DDD
+    border: 1px solid rgba(220, 220, 220, 0.8)
+    margin: 80px auto 0
+    border-radius: 1px
+    position: relative
+
+    .logo-link
+      width: 48px
+      height: 48px
+      position: absolute
+      top: 12px
+      right: 30px
+      font-size: 0
+      color: transparent
+      background: transparent url(image_path('logo.png')) no-repeat center center
+
+    .hidden
+      display: none
+
+    h1
+      margin: 0
+      font-weight: bold
+      font-size: 28px
+      color: #666
+      padding: 20px 38px
+      border-bottom: 1px solid rgba(240, 240, 240, 0.8)
+
+    .auth-box-form
+      padding: 30px 40px 50px
+
+    .group
+      margin-bottom: 20px
+
+    input[type=text], input[type=email], input[type=password]
+      width: 97%
+      height: 34px
+      border: 1px solid #999
+      border: 1px solid rgba(180, 180, 180, 0.8)
+      background: #F8F8F8
+
+      &:focus
+        box-shadow: 0 0 0 transparent
+        background: #FFF
+        border: 1px solid #888
+        border: 1px solid rgba(160, 160, 160, 0.8)
+
+    label
+      font-weight: bold
+      color: #666
+
+    span.remember
+      display: inline-block
+
+
+  .bottom-nav
+    overflow: hidden
+    padding-top: 10px
+    margin-top: 15px
+
+    .button
+      float: left
+      font-size: 14px
+      font-weight: bold
+      cursor: pointer
+      height: 38px
+      display: inline-block
+      line-height: 18px
+      padding: 6px 30px
+      +border-radius(1px)
+      outline: none
+      border: none
+      background: #344646
+      color: #FFF
+      margin-top: 5px
+
+      &:hover
+        background: #4a6363
+
+
+    .links
+      float: right
+      font-size: 14px
+      text-align: right
+      line-height: 18px
+      color: #555
+      font-weight: bold
+      margin-top: 4px
+
+      a
+        color: #344646
+
+  #error_explanation
+    ul
+      margin: 0 0 10px 0
+
+    li
+      font-size: 12px
+      background: #F1F1F1
+      padding: 2px 10px
+      margin: 2px 0
+      color: #F74747
+
+  .alert, #error_explanation h2
+    text-align: center
+    background: #a64545
+    padding: 8px
+    font-size: 12px
+    font-weight: bold
+    color: #FFF
+
+  .alert
+    margin-bottom: 20px
+
+  .checkbox-input
+    display: inline-block
+
+    label
+      border-radius: 1px
+      width: 16px
+      height: 16px
+      line-height: 16px
+      display: inline-block
+      cursor: pointer
+      border: 1px solid #ccc
+      text-align: center
+      font-size: 16px
+      margin: 0
+
+    input[type=checkbox]
+      display: none
+
+    input[type=checkbox] + label
+      background: #F0F0F0
+      text-indent: -99999px
+
+    input[type=checkbox]:checked + label
+      text-indent: 0
+      background: #FFF
+
+  input[type=text], input[type=password], input[type=email]
+    border: none
+    background: #F8F8F8
+    padding: 5px
+    height: 25px
+
+    &:focus
+      background: #FDFDFD
+      outline: none

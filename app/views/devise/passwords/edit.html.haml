@@ -1,0 +1,24 @@
+.image-overlay
+.auth-box-container
+  .auth-box
+    %h1 Change your password
+    =link_to "Home", root_path, class: 'logo-link'
+
+    .auth-box-form
+      = form_for(resource, :as => resource_name, :url => "/password", :html => { :method => :put }) do |f|
+        - if resource.errors.present?
+          .flash-alert.alert
+            = resource.errors.full_messages.to_sentence(last_word_connector: ' and ')
+        = f.hidden_field :reset_password_token
+
+        .group
+          .hidden= f.label :password, "New password"
+          = f.password_field :password, autofocus: true, placeholder: "New password"
+        .group
+          .hidden= f.label :password_confirmation, "Confirm new password"
+          = f.password_field :password_confirmation, placeholder: "Password Confirmation"
+
+        .group.bottom-nav
+          = f.submit "Change my password", class: 'button'
+          .links
+            = render "devise/shared/links"

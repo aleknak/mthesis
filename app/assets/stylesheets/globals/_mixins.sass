@@ -1,0 +1,20 @@
+@mixin arial($size, $weight)
+  font-family: 'Arial', sans-serif
+  font-size: $size
+  font-weight: $weight
+
+@mixin input-placeholder($color)
+  &.placeholder
+    color: $color
+
+  &:-moz-placeholder
+    color: $color
+
+  &::-webkit-input-placeholder
+    color: $color
+
+@mixin calc($property, $expression)
+  #{$property}: -webkit-calc(#{$expression})
+  #{$property}: -moz-calc(#{$expression})
+  #{$property}: -o-calc(#{$expression})
+  #{$property}: calc(#{$expression})

@@ -1,0 +1,20 @@
+.image-overlay
+.auth-box-container
+  .auth-box
+    %h1 Forgot your password?
+    =link_to "Home", root_path, class: 'logo-link'
+
+    .auth-box-form
+      = form_for(resource, :as => resource_name, :url => "/password", :html => { :method => :post }) do |f|
+        - if resource.errors.present?
+          .flash-alert.alert
+            = resource.errors.full_messages.to_sentence(last_word_connector: ' and ')
+
+        .group
+          .hidden= f.label :email
+          = f.email_field :email, autofocus: true, placeholder: 'Email'
+
+        .group.bottom-nav
+          = f.submit "Send me reset password instructions", class: 'button'
+          .links
+            = render "devise/shared/links"

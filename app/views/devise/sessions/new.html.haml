@@ -1,0 +1,30 @@
+.image-overlay
+.auth-box-container
+  .auth-box
+    %h1 Sign in
+    =link_to "Home", root_path, class: 'logo-link'
+
+    .auth-box-form
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        - if flash[:alert]
+          .flash-alert.alert
+            = flash[:alert]
+        .group
+          .hidden= f.label :email
+          = f.email_field :email, autofocus: true, placeholder: 'Email'
+        .group
+          .hidden= f.label :password
+          = f.password_field :password, placeholder: 'Password'
+
+        - if devise_mapping.rememberable?
+          .group
+            %span.checkbox-input
+              = f.check_box :remember_me
+              = f.label :remember_me, "✔"
+            %span.remember= f.label :remember_me
+
+
+        .group.bottom-nav
+          = f.submit "Sign in", class: 'button'
+          .links
+            = render "devise/shared/links"

@@ -10,8 +10,11 @@
     = csrf_meta_tags
   %body
     .content-wrapper
-      %header.top-header
-        %header.header-1.js-header
+      %header#header.top-bar.fixed
+        #main-nav-region.columns.large-5
+          .username.left= current_user.email
+        #topbar-region.columns.large-7
+          %a.logout-link.right{ href: "/logout" } Logout
 
       .row
         #main-content.medium-12.columns
@@ -23,5 +26,3 @@
 
       #dialog-region.reveal-modal.small{"data-reveal" => true}
       #info-region.hidden
-
-      .popup
