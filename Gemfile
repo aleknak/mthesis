@@ -50,6 +50,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem "grape"
 gem "grape-entity"
 gem "inherited_resources"
+# API docs
+gem 'swagger_rails', git: 'git@gitlab.medialab.io:ruby/swagger-rails.git', branch: 'master'
 
 gem "devise", '>= 2.0.0'
 gem 'devise-async'

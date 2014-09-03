@@ -6,4 +6,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+
+  mount API => '/api'
+  mount SwaggerRails::Engine => '/docs' if defined? SwaggerRails
 end
