@@ -9,20 +9,14 @@
     = javascript_include_tag "vendor/modernizr"
     = csrf_meta_tags
   %body
-    .content-wrapper
-      %header#header.top-bar.fixed
-        #main-nav-region.columns.large-5
-          .username.left= current_user.email
-        #topbar-region.columns.large-7
-          %a.logout-link.right{ href: "/logout" } Logout
+    #header.fixed
+      = render "header"
+    
+    #main-content
+      = render "sample"
+      -# = yield
+    
+    %footer#footer
+      = render "footer"
 
-      .row
-        #main-content.medium-12.columns
-          %section#content.content-container.js-content-container
-            = yield
-        #sidebar-region.large-3.columns
-
-      %footer#footer.footer.js-footer
-
-      #dialog-region.reveal-modal.small{"data-reveal" => true}
-      #info-region.hidden
+    #dialog-region.reveal-modal.small{"data-reveal" => true}
