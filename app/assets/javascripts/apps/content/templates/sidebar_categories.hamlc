@@ -1,0 +1,12 @@
+%h3 Categories
+%h5.subheader
+  %ul
+    %li 
+      %a{ :href => "#" }
+        Category 1
+    %li 
+      %a{ :href => "#" }
+        Category 2
+    %li 
+      %a{ :href => "#" }
+        Category 3

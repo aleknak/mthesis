@@ -14,10 +14,17 @@
 //= require jquery_ujs
 //= require foundation
 //= require hamlcoffee
-//= require jquery-fileupload/basic
 //= require underscore-min
 //= require underscore-string
 //= require backbone-min
+//= require ./apps/content/content_app
+//= require_tree ./apps/content/templates/
+//= require_tree ./apps/content/helpers/
+//= require_tree ./apps/content/models/
+//= require_tree ./apps/content/collections/
+//= require_tree ./apps/content/views/
+//= require_tree ./apps/content/routers/
+//= require_tree .
 
 $(function(){ 
   Foundation.global.namespace = ''; 

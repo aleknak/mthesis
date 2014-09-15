@@ -21,15 +21,15 @@ gem 'haml_coffee_assets', github: 'netzpirat/haml_coffee_assets', branch: 'maste
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 #jQuery File Upload integrated for Rails
-gem 'jquery-fileupload-rails'
+# gem 'jquery-fileupload-rails'
 
 # Javascript frameworks support
 gem 'ejs'
-# gem 'rails-assets-marionette', '1.8.5'
-# gem 'rails-assets-backbone.picky'
-# gem 'rails-assets-backbone.syphon'
-# gem 'rails-assets-backbone-pageable'
+gem 'rails-assets-backbone'
+gem 'rails-assets-backbone.picky'
 gem 'rails-assets-modernizr'
+gem 'rails-assets-underscore'
+
 
 gem 'quiet_assets'
 

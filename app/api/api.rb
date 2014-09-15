@@ -3,6 +3,10 @@ require 'grape-swagger'
 class API < Grape::API
   use ApiLogger
 
+  # videos
+  mount Resources::Videos::Index
+  mount Resources::Videos::Show
+
   # users
   mount Resources::Users::Index
   mount Resources::Users::Show

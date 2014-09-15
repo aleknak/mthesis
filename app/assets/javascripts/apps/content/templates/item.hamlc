@@ -1,0 +1,4 @@
+%img{:src => @model.get('thumbnail')}
+.panel
+  %h5= @model.get('title')
+  %h6.subheader= @model.get('description')
