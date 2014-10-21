@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: mthesis_dev
+  pool: 5
+  reaping_frequency: 10
+  username: dbuser
+  password: dbpass
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: mthesis_test
+  pool: 5
+  reaping_frequency: 10
+  username: dbuser
+  password: dbpass
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: mthesis_production
+  pool: 5
+  reaping_frequency: 10
+  username: dbuser
+  password: dbpass
