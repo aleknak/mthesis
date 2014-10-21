@@ -29,8 +29,6 @@ gem 'rails-assets-backbone'
 gem 'rails-assets-backbone.picky'
 gem 'rails-assets-modernizr'
 gem 'rails-assets-underscore'
-
-
 gem 'quiet_assets'
 
 # CSS framework
@@ -47,21 +45,24 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Grape API framework
 gem "grape"
 gem "grape-entity"
 gem "inherited_resources"
+
 # API docs
 gem 'swagger_rails', git: 'git@gitlab.medialab.io:ruby/swagger-rails.git', branch: 'master'
 
+# User authentication
 gem "devise", '>= 2.0.0'
 gem 'devise-async'
 
+# Uploads
 gem 'rmagick'
 gem 'carrierwave'
-gem 'kaminari'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# Paging
+gem 'kaminari'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -71,6 +72,7 @@ gem 'kaminari'
 
 gem 'factory_girl_rails'
 gem 'faker'
+
 # Testing tools
 group :development, :test do
   gem 'rspec-rails'
