@@ -1,5 +1,6 @@
 class Content.MainView extends Backbone.View
-  className: 'content-items js-content-items'
+  tagName: 'ul'
+  className: 'content-items js-content-items small-block-grid-2 medium-block-grid-3 large-block-grid-4'
 
   initialize: ->
     _.bindAll this, "render"

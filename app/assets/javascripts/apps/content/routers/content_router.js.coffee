@@ -2,6 +2,7 @@ class Content.Router extends Backbone.Router
   
   routes:
     "" : "index"
+    "play/:id" : "show"
   
   initialize: ->
     console.log "- Content.Router initialize"
@@ -17,6 +18,22 @@ class Content.Router extends Backbone.Router
         view = new Content.MainView(collection: videos)
         container.html(view.render().el)
 
+    @sidebar_init()
+
+  show: (id) ->
+    console.log "shoud play #{id}"
+    self = @
+    
+    # put in a cleanup method
+    container = $('#content-region')
+    container.html ''
+
+    video = new Content.Video(id: id)
+    video.fetch
+      success: ->
+        view = new Content.ItemDetailsView(model: video)
+        container.html(view.render().el)
+    
     @sidebar_init()
 
   sidebar_init: ->

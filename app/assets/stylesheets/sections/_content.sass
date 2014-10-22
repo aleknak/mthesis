@@ -1,0 +1,30 @@
+ul.content-items
+  li
+    .image-box
+      display: inline-block
+      position: relative
+
+      img
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2)
+
+      .title
+        display: none
+        background: rgba(0,0,0,0.5)
+        position: absolute 
+        left: 0
+        bottom: 0
+        color: white
+        padding: 5px
+        width: 100%
+        font-size: 14px
+        font-weight: bold
+    
+    &:hover 
+      .image-box
+        background: rgba(0,0,0,0.7)
+        
+        img
+          +opacity(0.5)
+
+        .title
+          display: inline-block

@@ -1,4 +1,3 @@
-%img{:src => @model.get('thumbnail')}
-.panel
-  %h5= @model.get('title')
-  %h6.subheader= @model.get('description')
+%a.image-box{ href: "#play/#{@model.get('id')}" }
+  %img{:src => @model.get('thumbnail').thumb.url}
+  .title= _.str.truncate(@model.get('title'), 15)

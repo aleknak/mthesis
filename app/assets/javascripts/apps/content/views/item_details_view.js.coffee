@@ -1,7 +1,5 @@
-class Content.ItemView extends Backbone.View
-  tagName: 'li'
-  className: 'text-center'
-  template: JST['apps/content/templates/item']
+class Content.ItemDetailsView extends Backbone.View
+  template: JST['apps/content/templates/item_details']
 
   initialize: (options) ->
     @options = options || {}
@@ -10,6 +8,5 @@ class Content.ItemView extends Backbone.View
   render: ->
     self = @
     container = $(@el)
-    container.attr("id", "item-#{@model.id}")
     container.html @template(model: @model)
     this

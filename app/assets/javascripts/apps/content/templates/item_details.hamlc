@@ -1,0 +1,4 @@
+%h2= @model.get('title')
+%video{ id: "video-#{@model.get('id')}", class: "video-js vjs-default-skin", controls: "", preload: "none", width: "853", height: "480", poster: "#{@model.get('thumbnail').promo.url}" }
+  %source{ src: "#{@model.get('source')}", type: 'video/mp4' }
+%h6.subheader= @model.get('description')
