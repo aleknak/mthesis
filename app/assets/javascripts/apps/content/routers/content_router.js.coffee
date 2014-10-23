@@ -21,33 +21,36 @@ class Content.Router extends Backbone.Router
     @sidebar_init()
 
   show: (id) ->
-    console.log "shoud play #{id}"
-    self = @
-    
+    console.log "- Content.Router show #{id}"
     # put in a cleanup method
-    container = $('#content-region')
-    container.html ''
+    content = $('#content-region')
+    sidebar = $('#sidebar-region')
+    content.html ''
+    sidebar.html ''
 
     video = new Content.Video(id: id)
     video.fetch
       success: ->
         view = new Content.ItemDetailsView(model: video)
-        container.html(view.render().el)
-    
-    @sidebar_init()
+        sidebar.append view.render().el
+
+        view = new Content.VideoView(model: video)
+        content.html view.render().el
+
 
   sidebar_init: ->
     console.log "-- Content.Router sidebar initialize..."
-    container = $('#sidebar-region')
+    sidebar = $('#sidebar-region')
+    sidebar.html ''
 
     # Categories View
     view = new Content.SidebarCategoriesView()
-    container.find('.js-categories').html view.render().el
+    sidebar.append view.render().el
 
     # Most Viewed View
     view = new Content.SidebarMostViewedView()
-    container.find('.js-most-viewed').html view.render().el
+    sidebar.append view.render().el
 
     # Popular Tags View
     view = new Content.SidebarPopularTagsView()
-    container.find('.js-popular-tags').html view.render().el
+    sidebar.append view.render().el

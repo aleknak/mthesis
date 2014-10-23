@@ -1,5 +1,5 @@
 class Content.SidebarCategoriesView extends Backbone.View
-  className: 'panel'
+  className: 'panel js-categories show-for-medium-up'
   template: JST['apps/content/templates/sidebar_categories']
 
   initialize: ->

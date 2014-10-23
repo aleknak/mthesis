@@ -1,6 +1,5 @@
-class Content.ItemDetailsView extends Backbone.View
-  className: 'js-item-details show-for-medium-up'
-  template: JST['apps/content/templates/item_details']
+class Content.VideoView extends Backbone.View
+  template: JST['apps/content/templates/video']
 
   initialize: (options) ->
     @options = options || {}
